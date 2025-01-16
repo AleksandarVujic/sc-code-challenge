@@ -1,0 +1,68 @@
+@import "../base/floating_keyframe.scss";
+
+.desctrption_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.floating_object {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 5px rgb(225, 223, 223) solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.description {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.author_section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.author {
+  font-weight: bold;
+  & a {
+    font-size: 1rem;
+    color: #2196f3;
+    transition: 0.5s;
+    &:hover {
+      font-weight: 700;
+      opacity: 0.7;
+    }
+  }
+}
+
+.version {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+ul {
+  margin: 20px 0;
+  padding-left: 20px;
+  list-style: none;
+  & li {
+    margin-bottom: 10px;
+  }
+}
