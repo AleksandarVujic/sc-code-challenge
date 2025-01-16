@@ -1,25 +1,27 @@
-<div class="admin-sidebar">
-  <div class="logo">
-    <img [src]="scp_logo" />
-    <div class="logo-title">SmartCat Pharmacy</div>
+<nav>
+  <div class="admin-sidebar">
+    <div class="logo">
+      <img [src]="scp_logo" />
+      <div class="logo-title">SmartCat Pharmacy</div>
+    </div>
+    <div class="links">
+      <ul>
+        <li>
+          <a [routerLink]="'/statistics'" routerLinkActive="active-link"
+            ><i class="ri-dashboard-2-line"></i> Statistics</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="'/products'" routerLinkActive="active-link"
+            ><i class="ri-briefcase-line"></i> Products</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="'/about'" routerLinkActive="active-link"
+            ><i class="ri-profile-line"></i> About App</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="links">
-    <ul>
-      <li>
-        <a [routerLink]="'/'" routerLinkActive="active-link"
-          ><span class="">&#9750;</span> Statistics</a
-        >
-      </li>
-      <li>
-        <a [routerLink]="'/products'" routerLinkActive="active-link"
-          ><span class="">&#9878;</span> Products</a
-        >
-      </li>
-      <li>
-        <a [routerLink]="'/about'" routerLinkActive="active-link"
-          ><span class="">&starf;</span> About App</a
-        >
-      </li>
-    </ul>
-  </div>
-</div>
+</nav>

@@ -14,7 +14,7 @@ export const routes: Routes = [
     // canActivate: [AuthGuard],
     children: [
       {
-        path: '',
+        path: 'statistics',
         component: StatisticsComponent,
       },
       {
@@ -32,6 +32,11 @@ export const routes: Routes = [
       {
         path: 'about',
         component: AboutComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'statistics',
+        pathMatch: 'full',
       },
     ],
   },
