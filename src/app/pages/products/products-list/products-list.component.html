@@ -3,8 +3,8 @@
     <div class="card-header">Products List</div>
     <span class="card-subheader">List of all Products</span>
     <div class="scp-card-body">
-      <div class="ui-toolbar toolbar-right">
-        <button class="scp-btn btn-success">
+      <div class="ui-toolbar toolbar-left">
+        <button class="scp-btn btn-success" [routerLink]="'/products/form'">
           <i class="ri-add-fill icon"></i> New
         </button>
       </div>
@@ -21,140 +21,31 @@
             </tr>
           </thead>
           <tbody>
+            @for (product of products; track product.id) {
+            <!-- @for (product of (products$ | async); track product.id) { -->
             <tr>
-              <td>Cafetin</td>
-              <td>Skopje Lekovi</td>
-              <td>25</td>
-              <td>22.11.2030.</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.manufacturer.name }}</td>
+              <td>{{ product.price }}</td>
+              <td>{{ product.expiryDate | date : "MMM dd, yyyy" }}</td>
               <td>
-                <button class="scp-btn btn-danger">
+                <button
+                  class="scp-btn btn-danger"
+                  (click)="deleteProduct(product.id)"
+                >
                   <i class="ri-delete-bin-line"></i>
                 </button>
-                <button class="scp-btn btn-primary">
+                <button
+                  class="scp-btn btn-primary"
+                  (click)="updateProductRedirect(product.id)"
+                >
                   <i class="ri-pencil-line"></i>
                 </button>
               </td>
             </tr>
-
-            <tr>
-              <td>Bruffen</td>
-              <td>Beograd Drog</td>
-              <td>11</td>
-              <td>11.2.2031.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Xanax</td>
-              <td>Bayer</td>
-              <td>34</td>
-              <td>1.2.2026.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Cafetin</td>
-              <td>Skopje Lekovi</td>
-              <td>25</td>
-              <td>22.11.2030.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Bruffen</td>
-              <td>Beograd Drog</td>
-              <td>11</td>
-              <td>11.2.2031.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Xanax</td>
-              <td>Bayer</td>
-              <td>34</td>
-              <td>1.2.2026.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Cafetin</td>
-              <td>Skopje Lekovi</td>
-              <td>25</td>
-              <td>22.11.2030.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Bruffen</td>
-              <td>Beograd Drog</td>
-              <td>11</td>
-              <td>11.2.2031.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Xanax</td>
-              <td>Bayer</td>
-              <td>34</td>
-              <td>1.2.2026.</td>
-              <td>
-                <button class="scp-btn btn-danger">
-                  <i class="ri-delete-bin-line"></i>
-                </button>
-                <button class="scp-btn btn-primary">
-                  <i class="ri-pencil-line"></i>
-                </button>
-              </td>
-            </tr>
+            } @if(!products.length){
+            <div>NO DATA</div>
+            }
           </tbody>
         </table>
       </div>

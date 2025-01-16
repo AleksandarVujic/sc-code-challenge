@@ -1,1 +1,19 @@
-<p>products-form works!</p>
+<section class="admin-page">
+  <div class="scp-card">
+    <div class="card-header">
+      @if(editmode){ Edit Product } @else { Add New Product }
+    </div>
+    <span class="card-subheader">You can add or edit products here</span>
+    <div class="scp-card-body">
+      <div class="ui-toolbar toolbar-right">
+        <button class="scp-btn btn-success">
+          <i class="ri-add-fill icon"></i>
+          @if(editmode){ Update } @else { Create }
+        </button>
+        <button class="scp-btn btn-light" (click)="onCancel()">
+          <i class="ri-arrow-left-line icon"></i> Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
