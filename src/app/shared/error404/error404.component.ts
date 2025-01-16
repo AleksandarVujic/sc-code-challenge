@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-error404',
   standalone: true,
   imports: [],
   templateUrl: './error404.component.html',
-  styleUrl: './error404.component.scss'
+  styleUrl: './error404.component.scss',
 })
-export class Error404Component {
+export class Error404Component implements OnInit {
+  constructor(private router: Router) {}
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.router.navigate(['']);
+    }, 5000);
+  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { SCP_LOGO } from '../../constants';
 
 @Component({

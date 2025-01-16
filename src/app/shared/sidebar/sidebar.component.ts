@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { SCP_LOGO } from '../../constants';
 import { RouterModule } from '@angular/router';
+
+import { SCP_LOGO } from '../../constants';
 
 @Component({
   selector: 'admin-sidebar',
