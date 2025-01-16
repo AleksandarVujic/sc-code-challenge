@@ -1,0 +1,37 @@
+.scp-btn {
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(241, 156, 18, 0.6);
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+}
+
+.btn-primary {
+  background-color: #3498db;
+}
+
+.btn-danger {
+  background-color: #f30000;
+}
+
+.btn-success {
+  background-color: #2ecc71;
+}
+
+.btn-warning {
+  background-color: #f39c12;
+}
