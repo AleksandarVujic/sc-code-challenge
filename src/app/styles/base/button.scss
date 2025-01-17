@@ -1,5 +1,7 @@
+@import "../base/colors.scss";
+
 .scp-btn {
-  color: #ffffff;
+  color: $white_origin;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
@@ -38,5 +40,5 @@
 
 .btn-light {
   background-color: #f8f9fa;
-  color: #000;
+  color: $dark_side;
 }

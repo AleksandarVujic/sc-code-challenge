@@ -1,3 +1,5 @@
+@import "../base/colors.scss";
+
 .admin {
   &-wrapper {
     height: 100%;
@@ -13,10 +15,12 @@
   &-sidebar {
     position: fixed;
     width: 200px;
-    background-color: #0a1d31;
+    background-color: $dark_side;
     height: 100%;
     top: 0;
     transition: width 0.3s ease;
+    // border-top-right-radius: 25px;
+    // border-bottom-right-radius: 25px;
 
     .logo {
       padding: 20px;
@@ -38,7 +42,9 @@
     }
 
     .active-link {
-      background-color: #1976d2;
+      background-color: $primary_color;
+      // border-top-right-radius: 25px;
+      // border-bottom-right-radius: 25px;
     }
 
     .links {
@@ -52,23 +58,21 @@
           width: 100%;
 
           a {
-            color: #fff;
+            color: $white_origin;
             padding: 10px 15px;
             display: block;
             font-size: 1.2rem;
 
             &:hover {
               cursor: pointer;
-              background-color: #1976d2;
+              background-color: $primary_color;
+              // border-top-right-radius: 25px;
+              // border-bottom-right-radius: 25px;
             }
 
             i {
               margin-right: 8px;
               margin-top: 0;
-            }
-
-            &.logout {
-              color: #2196f3;
             }
           }
         }

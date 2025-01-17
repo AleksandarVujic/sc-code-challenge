@@ -1,3 +1,5 @@
+@import "../base/colors.scss";
+
 .form {
   padding: 0.75rem 0;
   display: grid;
@@ -11,7 +13,7 @@
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: #495057;
+  color: $dark_gray;
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -19,9 +21,9 @@
 }
 
 .form_control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
+  color: $dark_gray;
+  background-color: $white_origin;
+  border-color: $primary_color;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
