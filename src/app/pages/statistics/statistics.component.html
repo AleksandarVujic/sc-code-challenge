@@ -1,13 +1,17 @@
 <section class="admin-page">
-    <div class="scp-card">
-      <div class="card-header">Statistics</div>
-      <span class="card-subheader">Latest Updates</span>
-      <div class="scp-card-body">
-  
-  
-  
-          
-      </div>
+  <div class="scp-card">
+    <div class="card-header">Statistics</div>
+    <span class="card-subheader">Latest Updates</span>
+    <div class="scp-card-body">
+      <canvasjs-chart
+        [options]="priceChartData"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
+
+      <canvasjs-chart
+        [options]="pieChartData"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
     </div>
-  </section>
-  
+  </div>
+</section>
